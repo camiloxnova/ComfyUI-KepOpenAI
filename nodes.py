@@ -38,7 +38,7 @@ class ImageWithPrompt:
     ) -> Tuple[str]:
         b64image = image.pil2base64(image.tensor2pil(Image))
         response = self.open_ai_client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4-turbo-preview",
             max_tokens=max_tokens,
             messages=[
                 {
